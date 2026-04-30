@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --scootza-green: #39B54A;
+  --scootza-dark: #333333;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #333333;
+  background: #FFFFFF;
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-scootza-green text-white font-semibold rounded-full transition-all duration-300 hover:bg-scootza-green-dark hover:shadow-lg hover:shadow-scootza-green/30 hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-scootza-dark font-semibold rounded-full border-2 border-scootza-dark transition-all duration-300 hover:bg-scootza-dark hover:text-white;
+  }
+  
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 text-scootza-dark font-semibold rounded-full transition-all duration-300 hover:bg-gray-100;
+  }
+  
+  .section-title {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl font-bold text-scootza-dark leading-tight tracking-tight;
+  }
+  
+  .section-subtitle {
+    @apply text-lg md:text-xl text-gray-600 leading-relaxed;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #39B54A;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2D9239;
+}
